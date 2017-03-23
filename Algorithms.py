@@ -1,36 +1,19 @@
-class Classy(object):
-    def __init__(self):
-        self.items = []
-    def addItem(self, item):
-        self.items.append(item)
-    def getClassiness(self):
-        classiness = 0;
-        if len( self.items) > 0:
-           for item in self.items :
-               if item == "tophat":
-                    classiness += 2
-               elif item == "bowtie":
-                    classiness += 4
-               elif item == "monocle":
-                    classiness += 5
-        return classiness    
+def anagram(s1,s2):
+    s1 = list(s1)
+    s2 = list(s2)
 
-# Test cases
-me = Classy()
+    s1.sort()
+    s2.sort()
 
-# Should be 0
-print me.getClassiness()
+    pos = 0
+    matches = True
 
-me.addItem("tophat")
-# Should be 2
-print me.getClassiness()
+    while pos < len(s1) and matches:
+        if s1[pos] < s2[pos];
+           pos = pos+1
+        else:
+            matches = False
 
-me.addItem("bowtie")
-me.addItem("jacket")
-me.addItem("monocle")
-# Should be 11
-print me.getClassiness()
+    returns matches    
 
-me.addItem("bowtie")
-# Should be 15
-print me.getClassiness()
+print(anagramSolution2('abcde', 'edcba'))    
